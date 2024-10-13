@@ -26,7 +26,7 @@ const Animal = {
 
 while (true) {
   let displayInfo = prompt(
-    "Now you can get my pet details: \n(1): Age \n(2): Happiness \n(3): Hunger \nType 'exit' to stop"
+    "Now you can get my pet details: \n(1): Age \n(2): Type \n(3): Name  \n(4):  Happiness \n(5): Hunger \nType 'exit' to stop"
   );
 
   if (displayInfo.toLowerCase() === "exit") {
@@ -34,34 +34,34 @@ while (true) {
   }
 
   // Handle Age
-  if (displayInfo.toLowerCase() === "age") {
+  if (displayInfo === "1") {
     if (Animal.age === "") {
       Animal.age = prompt("Enter the age of your pet:");
     }
     alert(`My pet's age is ${Animal.age}`);
   }
 
-  if (displayInfo.toLowerCase() === "type") {
+  if (displayInfo === "2") {
     if (Animal.type === "") {
       Animal.type = prompt("Enter the age of your pet:");
     }
-    alert(`My pet's age is ${Animal.type}`);
+    alert(`My pet's type is ${Animal.type}`);
   }
 
-  if (displayInfo.toLowerCase() === "name") {
+  if (displayInfo === "3") {
     if (Animal.name === "") {
       Animal.name = prompt("Enter the age of your pet:");
     }
-    alert(`My pet's age is ${Animal.name}`);
+    alert(`My pet's name is ${Animal.name}`);
   }
 
   // Handle Happiness
-  else if (displayInfo.toLowerCase() === "happiness") {
+  else if (displayInfo === "happiness") {
     alert(`My pet's happiness level is ${Animal.happiness}`);
   }
 
   // Handle Hunger
-  else if (displayInfo.toLowerCase() === "hunger") {
+  else if (displayInfo === "hunger") {
     alert(`My pet's hunger level is ${Animal.hunger}`);
   }
 
