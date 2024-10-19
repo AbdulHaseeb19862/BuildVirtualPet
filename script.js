@@ -1,4 +1,4 @@
-const Animal = {
+const animal = {
   name: "",
   type: "",
   age: "",
@@ -23,3 +23,23 @@ const Animal = {
 
   agePet: function () {},
 };
+
+while (!animal.name) {
+  animal.name = prompt("Enter the pet name");
+}
+
+while (!animal.type) {
+  animal.type = prompt("What kind of pet is it ? (e.g: dog,cat,dragon");
+}
+
+while (!animal.age) {
+  animal.age = +prompt("How old is your pet ?");
+}
+
+while (!animal.happiness) {
+  animal.happiness = +prompt("How happy is your pet ?");
+}
+
+while (!animal.hunger) {
+  animal.hunger = +prompt("How hungry is your pet ?");
+}
