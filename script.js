@@ -43,3 +43,14 @@ while (!animal.happiness) {
 while (!animal.hunger) {
   animal.hunger = +prompt("How hungry is your pet ?");
 }
+
+while (true) {
+  let displayInfo = prompt(
+    "(1) : Feed() \n (2) : Play() \n (3) : AgePet() \n Type 'exit' "
+  );
+
+  if (displayInfo.toLowerCase() === "exit") {
+    alert(`Goodbye! Thanks for taking care of ${animal.name}`);
+    break;
+  }
+}
