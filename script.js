@@ -8,9 +8,13 @@ const animal = {
   feed: function () {
     if (this.hunger > 0) {
       this.hunger = this.hunger - 20;
-      console.log("The Value of the hunger is: " + this.hunger);
+      if (this.hunger < 0) {
+        this.hunger = 0;
+      }
+
+      alert(`${this.name} has been fed. Hunger is now: ${this.hunger}`);
     } else {
-      alert("The hunger value can't go below zero.");
+      alert(`${this.name} is not hungry`);
     }
   },
 
@@ -52,5 +56,9 @@ while (true) {
   if (displayInfo.toLowerCase() === "exit") {
     alert(`Goodbye! Thanks for taking care of ${animal.name}`);
     break;
+  }
+
+  if (displayInfo === "1") {
+    animal.feed();
   }
 }
