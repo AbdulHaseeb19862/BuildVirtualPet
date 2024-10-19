@@ -21,7 +21,14 @@ const animal = {
   play: function () {
     if (this.happiness < 100) {
       this.happiness += 20;
-      alert("The happiness level after playing: " + this.happiness);
+      if (this.happiness > 100) {
+        this.happiness = 100;
+      }
+      alert(
+        `${this.name} played and is happy! Happy is now: ${this.happiness}`
+      );
+    } else {
+      alert(`${this.name} is already happy!`);
     }
   },
 
@@ -60,5 +67,9 @@ while (true) {
 
   if (displayInfo === "1") {
     animal.feed();
+  }
+
+  if (displayInfo === "2") {
+    animal.play();
   }
 }
