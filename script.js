@@ -32,7 +32,25 @@ const animal = {
     }
   },
 
-  agePet: function () {},
+  agePet: function () {
+    this.age += 1;
+    if (this.happiness > 0) {
+      this.happiness = this.happiness - 5;
+      if (this.happiness < 0) {
+        this.happiness = 0;
+      }
+    }
+
+    if (this.hunger < 100) {
+      this.hunger = this.hunger + 10;
+      if (this.hunger > 100) {
+        this.hunger = 100;
+      }
+    }
+    alert(
+      `${this.name} age is now : ${this.age}, the happiness level is ${this.happiness} and the hunger level is ${this.hunger}`
+    );
+  },
 };
 
 while (!animal.name) {
@@ -71,5 +89,9 @@ while (true) {
 
   if (displayInfo === "2") {
     animal.play();
+  }
+
+  if (displayInfo === "3") {
+    animal.agePet();
   }
 }
